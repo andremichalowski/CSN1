@@ -70,3 +70,30 @@ my_str = "Lambda School"
 (REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-basic-types#main.py
 
 --------------------------------------------------
+
+5 - BASIC LIST OPERATIONS
+
+my_list = [] # empty list literal
+my_list.append(1) # add 1 to end of list
+my_list.append(2) # add 2 to end of list
+my_list.append(3) # add 3 to end of list
+print(my_list[0]) # prints 1
+print(my_list[1]) # prints 2
+print(my_list[2]) # prints 3
+
+# iterate over the list with for statement to print each item in my_list
+for item in my_list:
+    print(item)
+
+Last, let's iterate through our numbers list to sum up all of the numbers:
+
+sum = 0
+for number in numbers:
+    sum += number
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-list-operations
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-list-operations#main.py
+
+
+------------------------------------------------------
+
