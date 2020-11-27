@@ -97,3 +97,42 @@ for number in numbers:
 
 ------------------------------------------------------
 
+6 - BASIC OPERATORS
+
+#Modulo
+There is also an operator called the modulo operator (%). This operator returns the remainder of integer division.
+
+my_remainder = 9 % 4
+print(my_remainder) # 1
+
+#Exponent
+You can use two multiplication operators to make the exponentiation operator (**).
+
+two_squared = 2 ** 2
+print(two_squared)    # 4
+two_cubed = 2 ** 3
+print(two_cubed)      # 8
+
+
+# Sample all
+
+First, let's create two variables, a and b, where each variable stores an instance of the object class.
+
+a = object()
+b = object()
+Next, let's see if we can make two lists, one containing five instances of a, and the second with five instances of b.
+
+a_list = [a] * 5
+b_list = [b] * 5
+Then, let's combine a_list and b_list into a combined list.
+
+combined = a_list + b_list
+If our code works as expected, combined should have a length of 10.
+
+print(len(combined)) # 10
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-basic-operators#main.py
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-basic-operators#main.py
+
+----------------------------------------------
+
