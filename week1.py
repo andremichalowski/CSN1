@@ -62,4 +62,11 @@ Notice the characters are " " (space), \t (tab), \n (newline), \r (return), \x0b
 
 4 - BASIC TYPES (INTEGERS, FLOATS, STRINGS)
 
-...
+my_int = 2
+my_float = 5.0
+my_str = "Lambda School"
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-basic-types#main.py
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-basic-types#main.py
+
+--------------------------------------------------
