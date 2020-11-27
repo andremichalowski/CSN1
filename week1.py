@@ -136,3 +136,19 @@ print(len(combined)) # 10
 
 ----------------------------------------------
 
+7 - Formatted STRINGS
+
+#Sample 1 Formatted string
+product_name = "bananas"
+price = 1.23
+product_id = 123456
+
+We need to print a formatted string using argument specifiers and a tuple that contains our data:
+
+print("%s (id: %d) are currently $%.2f." % (product_name, product_id, price))
+# bananas (id: 123456) are currently $1.23.
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-formatted-strings
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-formatted-strings#main.py
+
+------------------------------------------------
