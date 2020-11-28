@@ -261,5 +261,63 @@ print(not (1 == 1)) # False because 1 == 1 is True and then is inverted by not
 (REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-conditional-expressions#main.py
 (REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-conditional-expressions#main.py
 
+!!! Return to revisit true statement \#2
 
 ----------------------------------------------
+
+10 - LOOPS
+
+Here is an example of a few different ways you can use a range as the iterable for a for loop.
+
+# Prints 0, 1, 2, 3, 4
+for x in range(5):
+    print(x):
+
+# Prints 2, 3, 4, 5, 6
+for x in range(2, 7):
+    print(x)
+
+# Prints 1, 3, 5, 7
+for x in range(1, 8, 2):
+    print(x)
+This example shows the simple usage of a while loop to print the same values as the for loops above.
+
+# Prints 0, 1, 2, 3, 4
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+# Prints 2, 3, 4, 5, 6
+count = 2
+while count < 7:
+    print(count)
+    count += 1
+
+# Prints 1, 3, 5, 7
+count = 1
+while count < 8:
+    print(count)
+      count += 2
+You can use a break statement to exit a for loop or a while loop.
+
+# Prints 0, 1, 2, 3, 4
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break
+You can also use a continue statement to skip the current block but not exit the loop entirely.
+
+# Prints 1, 3, 5, 7
+for x in range(8):
+    # if x is even, skip this block and do not print
+    if x % 2 == 0:
+        continue
+    print(x)
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-loops
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-loops#main.py
+
+!!! Return to review other versions of loops / seek additional instruction
