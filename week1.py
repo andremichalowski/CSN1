@@ -391,3 +391,35 @@ print(word_lengths) # [5, 6, 5, 10]
 (REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-list-comprehensions#main.py
 
 ---------------------------------------------------
+
+12 - USER DEFINED FUNCTIONS
+
+
+To define a function in Python, we follow this syntax:
+
+def function_name(argument_1, argument_2, etc.):
+    # function line 1
+    # function line 2
+    # etc.
+Follow Along
+Let's define a greeting function that allows us to specify a name and a specific greeting.
+
+def greet(name, greeting):
+    print("Hello, %s, %s" % (name, greeting))
+Now, we can call our greet function and pass in the data that we want.
+
+greet("Austen", "I hope you are having an excellent day!")
+# Hello, Austen, I hope you are having an excellent day!
+If we want to define a function that returns a value to the caller, we use the return keyword.
+
+def double(x):
+    return x * 2
+
+eight = double(4)
+print(eight)
+# 8
+
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-functions
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-functions#main.py
+
