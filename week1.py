@@ -321,3 +321,73 @@ for x in range(8):
 (REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-loops#main.py
 
 !!! Return to review other versions of loops / seek additional instruction
+
+-------------------------------------------
+
+11 - LIST COMPREHENSIONS
+
+List comprehensions are a potent tool. With a list comprehension, you can create a new list based on another list in a single, highly readable line.
+
+The format of a list comprehension follows this syntax:
+
+[<map expression> for <name> in <sequence expression> if <filter expression>]
+
+Follow Along
+If you are using a for loop to map a list onto a new list or filter an existing list, a list comprehension can be a better option.
+
+Here is an example of replacing a for loop used to map word lengths with a single line with a list comprehension.
+
+sentence = "Every moment is a fresh beginning."
+words = sentence.split()
+word_lengths = []
+
+# Using a for loop
+for word in words:
+    word_lengths.append(len(word))
+
+print(words)        # ['Every', 'moment', 'is', 'a', 'fresh', 'beginning.']
+print(word_lengths) # [5, 6, 2, 1, 5, 10]
+
+# Using a list comprehension
+word_lengths = [len(word) for word in words]
+
+print(word_lengths) # [5, 6, 2, 1, 5, 10]
+Here is an example of replacing a for loop used to filter out odd numbers from a list with a list comprehension.
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = []
+
+# Using a for loop
+for number in numbers:
+    if number % 2 == 0:
+        even_numbers.append(number)
+
+print(even_numbers) # [2, 4, 6, 8, 10]
+
+# Using a list comprehension
+even_numbers = [number for number in numbers if number % 2 == 0]
+
+print(even_numbers) # [2, 4, 6, 8, 10]
+You can also write a list comprehension that maps and filters simultaneously. Let's go back to our sentence example and only track word lengths that are greater than 2.
+
+sentence = "Every moment is a fresh beginning."
+words = sentence.split()
+word_lengths = []
+
+# Using a for loop
+for word in words:
+    if len(word) > 2:
+        word_lengths.append(len(word))
+
+print(words)        # ['Every', 'moment', 'is', 'a', 'fresh', 'beginning.']
+print(word_lengths) # [5, 6, 5, 10]
+
+# Using a list comprehension
+word_lengths = [len(word) for word in words if len(word) > 2]
+
+print(word_lengths) # [5, 6, 5, 10]
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-list-comprehensions
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-list-comprehensions#main.py
+
+---------------------------------------------------
