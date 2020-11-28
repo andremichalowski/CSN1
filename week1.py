@@ -449,3 +449,47 @@ print(a_class_object.function())
 
 -----------------------------------------------
 
+14 - DICTIONARIES
+
+Let's use a dictionary to create a collection that maps first names as keys (strings) to phone numbers as values.
+
+phonebook = {} # creates an empty dictionary
+phonebook["Abe"] = 4569874321
+phonebook["Bill"] = 7659803241
+phonebook["Barry"] = 6573214789
+
+print(phonebook)
+# {'Abe': 4569874321, 'Bill': 7659803241, 'Barry': 6573214789}
+Instead of adding one key-value pair at a time, we can initialize the dictionary to have the same values.
+
+phonebook = {
+    "Abe": 4569874321,
+    "Bill": 7659803241,
+    "Barry": 6573214789
+}
+
+print(phonebook)
+# {'Abe': 4569874321, 'Bill': 7659803241, 'Barry': 6573214789}
+We can iterate over a dictionary as we iterated over a list. We can use the items() method, which returns a tuple with the key and value for each item in the dictionary.
+
+for name, number in phonebook.items():
+    print("Name: %s, Number: %s" % (name, number))
+
+# Name: Abe, Number: 4569874321
+# Name: Bill, Number: 7659803241
+# Name: Barry, Number: 6573214789
+To remove a key-value pair from a dictionary, you need to use the del keyword or use the pop() method available on dictionary objects. The difference is pop() deletes the item from the dictionary and returns the value. When you use the del keyword, you've written a statement that doesn't evaluate to anything.
+
+phonebook = {
+    "Abe": 4569874321,
+    "Bill": 7659803241,
+    "Barry": 6573214789
+}
+
+del phonebook["Abe"]
+
+print(phonebook.pop("Bill"))
+# 7659803241
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-dictionaries
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-dictionaries#main.py
