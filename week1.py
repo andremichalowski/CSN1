@@ -196,3 +196,70 @@ print(my_string.split("l")) # ['He', '', 'o, wor', 'd!']
 (REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-basic-string-operations#main.py
 
 
+-------------------------------------------
+
+9 - CONDITIONALS AND BOOLEANS
+
+x = 10
+print(x == 10) # True
+print(x == 5)  # False
+print(x < 15)  # True
+print(x > 15)  # False
+print(x <= 10) # True
+print(x >= 10) # True
+print(x != 20) # True
+You build up more complex boolean expressions by using the and and or operators.
+
+name = "Elon"
+age = 49
+if name == "Elon" and age == 49:
+    print("You are a 49 year old person named Elon.")
+
+if name == "Elon" or name == "Bill":
+    print("Your name is either Elon or Bill.")
+Any time you have an iterable object (like a list), you can check if a specific item exists inside that iterable by using the in operator.
+
+years = [2018, 2019, 2020, 2021]
+year = 2020
+
+if year in years:
+    print("%s is in the years collection" % year)
+
+# 2020 is in the years collection
+We can use the if, elif, and the else keywords to define a series of code blocks that will execute conditionally.
+
+first_statement = False
+second_statement = True
+
+if first_statement:
+    print("The first statement is true")
+elif second_statement:
+    print("The second statement is true")
+else:
+    print("Neither the first statement nor the second statement are true")
+Any object that is considered "empty" evaluates to False. For example, "", [], and 0 all evaluate to False.
+
+If we want to determine if two objects are actually the same instance in memory, we use the is operator instead of the value comparison operator ==.
+
+a = [1,2,3]
+b = [1,2,3]
+
+print(a == b) # True because a and b have the same value
+print(a is b) # False because a and b reference two different list objects
+
+x = [1,2,3]
+y = x
+
+print(x == y) # True because x and y have the same value
+print(x is y) # True because x and y reference the same list object
+There is also the not operator, which inverts the boolean that follows it:
+
+print(not False)    # True
+print(not (1 == 1)) # False because 1 == 1 is True and then is inverted by not
+
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-conditional-expressions#main.py
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-conditional-expressions#main.py
+
+
+----------------------------------------------
