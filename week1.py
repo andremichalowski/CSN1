@@ -423,3 +423,29 @@ print(eight)
 (REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-functions
 (REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-functions#main.py
 
+-----------------------------------------------
+
+13 - Create user-defined classes and interact with instances of those classes
+
+Let's define a class so we can use it as a blueprint for an object.
+
+class MyFirstClass:
+    variable = "data"
+
+    def function(self):
+        return "Printing from a MyFirstClass object."
+Now, to create an object based on MyFirstClass, we call the class like a function and assign the instance object to a variable.
+
+a_class_object = MyFirstClass()
+Now we can use dot notation to access variables and functions on the object.
+
+print(a_class_object.variable)
+# data
+print(a_class_object.function())
+# Printing from a MyFirstClass object.
+
+(REPLIT (CLEAN)) https://repl.it/@mdmccarley89/cs-unit-1-sprint-1-module-1-classes-and-instances
+(REPLIT (DONE)) https://repl.it/@AMichalowski/cs-unit-1-sprint-1-module-1-classes-and-instances#main.py
+
+-----------------------------------------------
+
