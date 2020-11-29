@@ -38,3 +38,13 @@ Does recursion help?
 Is the problem made up of identical subproblems?
 Can you state the problem with itself in its definition?
 Think like a villain. Does your plan cover the edge cases?
+
+3. EXECUTE:
+This step is where you take your plan and convert it to actual working code. This step isn’t easy, but it’s much easier if you've done an excellent job with the "Understand" and "Plan" steps above. If you find shortcomings in your plan while implementing the solution, return to the "Plan" phase until you resolve the ambiguity. If you have not yet completed the "Plan" step, you will spend far longer on the "Execute" step than you have to.
+
+Questions
+Think like a villain. Does your implementation handle all inputs?
+What is the best way to split this code into separate functions or classes?
+Does this functionality already exist?
+Are there built-in libraries I can leverage?
+Are there third-party libraries I can leverage?
