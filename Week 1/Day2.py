@@ -48,3 +48,16 @@ What is the best way to split this code into separate functions or classes?
 Does this functionality already exist?
 Are there built-in libraries I can leverage?
 Are there third-party libraries I can leverage?
+
+4. REFLECT:
+The primary question you are dealing with during this step is — "is this implementation as good as I can make it?" Would I be proud to show my code to another programmer?
+
+Questions
+Does your solution work in all cases?
+Main case?
+Edge cases?
+Is the solution performant enough?
+Is the code documented?
+In retrospect, what would you do differently? What will you do differently next time?
+What went right?
+What went wrong?
