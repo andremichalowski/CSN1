@@ -14,3 +14,7 @@ https://leetcode.com/explore/featured/card/top-interview-questions-easy/
 https://www.algoexpert.io/product
 https://www.codewars.com/dashboard
 udemy python?
+
+
+PRACTICE FOR GCA:
+https://app.codesignal.com/standardized-test/GgvonNCksGzjey46c
