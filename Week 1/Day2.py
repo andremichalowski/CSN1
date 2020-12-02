@@ -3,7 +3,6 @@
 U.P.E.R.
 
 1. UNDERSTAND:
-
 Before doing anything else, make sure you understand precisely what the problem is asking. A helpful starting point could be transcribing the technical description of the problem into your own words.
 
 Questions
