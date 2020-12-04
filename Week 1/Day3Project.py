@@ -71,6 +71,7 @@ def csSortedTwoSum(numbers, target):
         index_map[num] = i
     return None
     
+    https://yuhongjun.github.io/tech/2017/06/14/(LeetCode-167-Easy)Two-Sum-II-Input-array-is-sorted.html
     # for i in numbers:
     #     for j in numbers:
     #         if i + j == target:
