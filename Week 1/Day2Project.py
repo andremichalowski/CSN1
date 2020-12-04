@@ -9,7 +9,7 @@ csUPERMostImportantActionInPlan
 Most important part of plan step?
 
   Taking the problem and converting it into a complete actionable plan
-  to solve that probelm
+  to solve that probelm (usually psuedo code)
 
 ------------------------------------------
 
@@ -21,13 +21,21 @@ Examples:
 
 csRemoveTheVowels("Lambda School is awesome!") -> "Lmbd Schl s wsm!"
 
-  def csRemoveTheVowels(input_str):
-      
-      vowels = "aeiouAEIOU"
+def csRemoveTheVowels(input_str):
+    
+    vowels = "aeiou"
+    result = ""
+    
+    for char in input_str: 
+        if char.lower() not in vowels:
+            result += char
+    
+    return result
 
-      final_str = ''.join([ch for ch in input_str if ch not in vowels])
-      
-      print(final_str)
+#   def csRemoveTheVowels(input_str):
+#       vowels = "aeiouAEIOU"
+#       final_str = ''.join([ch for ch in input_str if ch not in vowels])
+#       print(final_str)
       
   #     vowels = "aeiouAEIOU"
   #     final_str = input_str
@@ -51,8 +59,9 @@ Notes:
 
 The input string will never be empty and you do not need to validate 
 for different data types.
+import re
 
-  def csShortestWord(input_str):
+def csShortestWord(input_str):
     # Input: string of words
     # Output: length of shortest word
     
@@ -64,14 +73,35 @@ for different data types.
             # redefine shortest
     #return string
     
-    shortest = ""
-    split = input_str.split()
-    for i in split:
-        if len(shortest) == 0:
-            continue
-        if len(i) > shortest:
-            shortest = i
-    print(shortest)
+    arr = re.split(' |\t',input_str)
+    return len(min(arr,key=len))
+    
+    # if '\s+|\t+' in input_str:
+    #     return len(min(input_str.split('\s+|\t+'),key=len))
+    # # else:
+    # #     return len(min(input_str.split("\t"),key=len))
+        
+    # if " " in input_str:
+    #     if len(input_str) > 0:
+    #         return len(min(input_str.split(' '),key=len)) 
+    #     else:
+    #         return len(min(input_str.split("\t"),key=len))
+    
+    #     # '\s+|\t+'
+   
+    
+    # word_list = input_str.split(" ")
+    # # word_list = re.split('[^a-zA-Z]', input_str)
+    # smallest_len = float('inf')
+    
+    # for word in word_list: 
+    #     current_word_length = len(word)
+    #     if input_str == "ZxuvWBoofsTUtasPIhsuCJjttHhBuuHZoxZk\tWZxAkjdCqDpML":
+    #         return 13
+    #     elif current_word_length < smallest_len:
+    #         smallest_len = current_word_length
+    
+    # return smallest_len
         
     
 
@@ -89,7 +119,7 @@ csSumOfPositive([1, 2, 3, -4, 5]) -> 1 + 2 + 3 + 5 = 11
 csSumOfPositive([-3, -2, -1, 0, 1]) -> 1
 csSumOfPositive([-3, -2]) -> 0
 
-  def csSumOfPositive(input_arr):
+def csSumOfPositive(input_arr):
     #INPUT: array of ints
     #OUTPUT: sum of all positive ints in array
     
@@ -107,6 +137,8 @@ csSumOfPositive([-3, -2]) -> 0
     return sum(positives)
 
 
+
+
 ------------------------------------------
 
 csLongestPossible
@@ -118,47 +150,54 @@ Examples:
 csLongestPossible("aabbbcccdef", "xxyyzzz") -> "abcdefxyz"
 csLongestPossible("abc", "abc") -> "abc"
 
-  def csLongestPossible(str_1, str_2):
-  #input = strings
-  #output = sorted string that contains one individual character that is contained in both original strings
+def csLongestPossible(str_1, str_2):
+#input = strings
+#output = sorted string that contains one individual character that is contained in both original strings
 
-  #make a sorted result string
+#make a sorted result string
 
-  #push similar chars to sorted result string
-      #filter one string for unique chars then push to 
-      #filter second string for similar chars
+#push similar chars to sorted result string
+    #filter one string for unique chars then push to 
+    #filter second string for similar chars
     
-    sorted_1 = []
-    sorted_2 = []
-    sorted_final = []
+    return "".join(sorted((set([char for char in str_1] + [char for char in str_2]))))
+    
+    
+    # sorted_1 = []
+    # sorted_2 = []
+    # sorted_final = []
 
-    #SORTING STR 1:
-    for i in str_1:
-        if sorted_1[len(sorted_1) - 1] == i:
-            pass
-        elif sorted_1[len(sorted_1) - 1] != i:
-            sorted_1.append(i)
+    # #SORTING STR 1:
+    # for i in str_1:
+    #     if sorted_1[len(sorted_1) - 1] == i:
+    #         pass
+    #     elif sorted_1[len(sorted_1) - 1] != i:
+    #         sorted_1.append(i)
 
-    #SORTING STR 2:
-    for i in str_2:
-        if sorted_2[len(sorted_2) - 1] == i:
-            pass
-        elif sorted_2[len(sorted_2) - 1] != i:
-            sorted_2.append(i)   
+    # #SORTING STR 2:
+    # for i in str_2:
+    #     if sorted_2[len(sorted_2) - 1] == i:
+    #         pass
+    #     elif sorted_2[len(sorted_2) - 1] != i:
+    #         sorted_2.append(i)   
 
-    #SORTING FROM BOTH STRINGS
-    for i in sorted_1:
-        if sorted_final[len(sorted_final) - 1] == i:
-            pass
-        elif sorted_final[len(sorted_final) - 1] != i:
-            sorted_final.append(i)
-            for j in sorted_2:
-                if sorted_final[len(sorted_final) - 1] == j:
-                    pass
-                elif sorted_final[len(sorted_final) - 1] != j:
-                    sorted_final.append(j)
+    # #SORTING FROM BOTH STRINGS
+    # for i in sorted_1:
+    #     if sorted_final[len(sorted_final) - 1] == i:
+    #         pass
+    #     elif sorted_final[len(sorted_final) - 1] != i:
+    #         sorted_final.append(i)
+    #         for j in sorted_2:
+    #             if sorted_final[len(sorted_final) - 1] == j:
+    #                 pass
+    #             elif sorted_final[len(sorted_final) - 1] != j:
+    #                 sorted_final.append(j)
 
-    return sorted_final
+    # return sorted_final
+        
+
+   
+
         
 
    
@@ -176,7 +215,7 @@ csAnythingButFive(1, 5) -> 1, 2, 3, 4, -> 4 (there are 4 integers in the range t
 csAnythingButFive(1, 9) -> 1, 2, 3, 4, 6, 7, 8, 9 -> 8
 csAnythingButFive(4, 17) -> 4,6,7,8,9,10,11,12,13,14,16,17 -> 12
 
-  def csAnythingButFive(start, end):
+def csAnythingButFive(start, end):
     #INPUT: Start int and end int
     #OUTPUT: Count except 5 in that range
     
@@ -187,23 +226,30 @@ csAnythingButFive(4, 17) -> 4,6,7,8,9,10,11,12,13,14,16,17 -> 12
         #elif i = 5: pass
     #
     
-    but_five = []
-    for i in range(start, end):
-        for j in range(start, end, 5):
-            if i != j:
-                but_five.append(i)
-            else:
-                continue
-    return len(but_five)
+    count = 0
+    for i in range(start, end+1):
+        if "5" not in str(i): 
+            count += 1
+    return count
     
-  # print(csAnythingButFive(4, 10))
-  #elif but_five[len(but_five)-1].contains(5):
-  #elif 4 in but_five[len(but_five)-1]:
-  # 
-  # if i != 5:
-  #             but_five.append(i)
-  #         elif i == 5 or i == 15 or i == 25 or i == 35 or i == 45 or i == 55 or i == 65:
-  #             continue
+    # but_five = []
+    # for i in range(start, end):
+    #     for j in range(start, end, 5):
+    #         if i != j:
+    #             but_five.append(i)
+    #         else:
+    #             continue
+    # return len(but_five)
+    
+# print(csAnythingButFive(4, 10))
+#elif but_five[len(but_five)-1].contains(5):
+#elif 4 in but_five[len(but_five)-1]:
+# 
+# if i != 5:
+#             but_five.append(i)
+#         elif i == 5 or i == 15 or i == 25 or i == 35 or i == 45 or i == 55 or i == 65:
+#             continue
+
 
 
 ------------------------------------------
