@@ -1,6 +1,6 @@
 SEAN CHEN DECEMBER 9TH QUEST AND STACKS: https://youtu.be/rwJFhD1XBFU
 
-1. QUE USING LL:
+1. QUEUE USING LL:
   class Node:
       def __init__(self, val):
           self.val = val
