@@ -77,3 +77,24 @@
                 n_minus_1 = recursive_fib(n-1)
                 n_minus_2 = recursive_fib(n-2)
                 return n_minus_1 + n_minus_2
+
+5. WRITE A BINARY SEARCH ALGORITHM:
+
+    def binary_search(array, target):
+    # 1. Declare min = 0 and max = length of array - 1
+    min = 0
+    max = len(array) - 1
+    while min < max: #min_idx < max_idx
+        # 2. Figure out the guess value by getting the middle integer between min and max
+        mid_guess = (max + min) // 2
+        # 3. if array[guess] equals the target, we found the element, return the index
+        if array[mid_guess] == target:
+            return mid_guess
+        # 4. if the mid_guess was too low, reset min to be one more than the mid_guess
+        elif array[mid_guess] < target:
+            min = mid_guess + 1
+        # 5. if the mid_guess was too high, reset max to be one less than the mid_guess
+        else:
+            max = mid_guess - 1
+    # no match was found
+    return -1
