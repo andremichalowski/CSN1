@@ -19,3 +19,25 @@
     2. NODES:
       n = 2^h - 1
 
+2. TIME AND SPACE COMPLEXITY, STRENGTHS AND WEAKNESSES, COMMON USES:
+
+  A. TIME AND SPACE COMPLEXITY:
+    TC: Time Complexity:
+      + Most time complexity depends on the balance of tree: # This is the same for insert and delete
+        - Balanced: O(log_n) 
+        - Unbalanced: O(n)
+    SC: Space Complexity:
+      + O(n) Linear #Each node in BST will take up space in memory
+
+  B. STRENGTHS AND WEAKNESSES
+    1. STRENGTHS:
+      1. Sorted by default # you can pull data in-order traversal
+      2. Efficient Searches # O(log n)
+        # Same efficiency as sorted Array
+          # faster with insertion and deletion though
+        # Slower than dictionaries in best case
+          # faster than dictionaries in worst case
+    2. WEAKNESSES:
+      1. Unbalanced trees are more inefficient 
+      2. Not especially efficient in anything Specific #(Even though good at general purpose efficiency)
+
