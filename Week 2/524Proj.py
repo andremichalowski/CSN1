@@ -66,4 +66,63 @@
     return False
 
 
-6. 
+6. BINARY SEARCH:
+
+  Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search for target in nums. If target exists, then return its index, otherwise, return -1.
+
+  def csBinarySearch(nums, target):
+    # I:  nums = sorted(asc) integer array
+    #     target = integer value desired
+    # O:  Exists: return Index
+    #     !Exist: return -1
+    
+    # If number e
+        
+    # min = 0
+    # max = len(nums) - 1
+    # while min < max:
+    #     mid_guess = (max + min) // 2
+    #     if nums[mid_guess] == target:
+    #         return mid_guess
+    #     elif nums[mid_guess] < target:
+    #         min = mid_guess + 1
+    #     elif nums[mid_guess] < target:
+    #         min = mid_guess + 1
+    #     else:
+    #         max = mid_guess - 1
+    # return -1
+        
+    left, right = 0, len(nums) - 1
+    while left <= right:
+        pivot = left + (right - left) // 2
+        if nums[pivot] == target:
+            return pivot
+        if target < nums[pivot]:
+            right = pivot - 1
+        else:
+            left = pivot + 1
+    return -1
+
+
+7. SEARCH ROTATED SORTED ARRAY:
+
+  def csSearchRotatedSortedArray(nums, target):
+      
+      # left = 0
+      # right = len(nums) - 1
+      # while left < right:
+      #     midpoint = (left + right) // 2
+      #     if nums[midpoint] > nums[0]:
+      #         left = midpoint
+      #     else:
+      #         right = midpoint 
+      #     if left + 1 == right:
+      #         return right 
+
+      i = 0
+      n = len(nums)
+      while i < n and nums[i] != target:
+          i += 1
+      if i < n:
+          return i
+      return -1
