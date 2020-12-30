@@ -82,3 +82,30 @@
         return result
 
 
+  4. BREADTH FIRST (LEVEL ORDER):
+
+    class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+         self.val = val
+         self.left = left
+         self.right = right
+
+    def breadth_first_traversal(root):
+        if root is None:
+            return []
+
+        result = []
+        queue = []
+        queue.append(root)
+
+        while len(queue) != 0:
+            node = queue.pop(0)
+            result.append(node.val)
+
+            if node.left is not None:
+                queue.append(node.left)
+
+            if node.right is not None:
+                queue.append(node.right)
+
+        return result
