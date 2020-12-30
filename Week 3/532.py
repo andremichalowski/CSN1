@@ -1,13 +1,15 @@
 1. TREE TRAVERSAL TYPES:
 
+  !!! >>> https://lambdaschool.instructure.com/courses/582/pages/objective-01-recall-the-different-traversal-types-for-a-binary-tree-and-implement-a-function-to-complete-the-traversal-for-each-type?module_item_id=527102 
+  
   # 1. DEPTH FIRST: 
-  #   A. InOrder
-  #   B. PreOrder
-  #   C. PostOrder
-  # 2. BREADTH FIRST
+  #   A. InOrder (L, N, R)
+  #   B. PreOrder (N, L, R)
+  #   C. PostOrder (L, R, N)
+  # 2. BREADTH FIRST (Custom)
 
 
-  1. DEPTH FIRST (INORDER):
+  1. DEPTH FIRST (INORDER) (Go Left, Visit Node, Go Right):
 
     Go to the left subtree
     Visit node
@@ -32,7 +34,7 @@
         return result
 
 
-  2. DEPTH FIRST (PREORDER):
+  2. DEPTH FIRST (PREORDER) (Visit Node, Go Left, Go Right):
 
     Visit the node
     Go to the left subtree
@@ -57,7 +59,7 @@
         return result
 
 
-  3. DEPTH FIRST (POSTORDER):
+  3. DEPTH FIRST (POSTORDER) (Go Left, Go Right, Visit Node):
 
     Go to the left subtree
     Go to the right subtree
@@ -82,7 +84,7 @@
         return result
 
 
-  4. BREADTH FIRST (LEVEL ORDER):
+  4. BREADTH FIRST (LEVEL ORDER) (See animation):
 
     class TreeNode:
      def __init__(self, val=0, left=None, right=None):
