@@ -44,3 +44,28 @@
               queue.append(current.right)
   ​
       return result 
+
+
+
+2. INORDER TRAVERSAL:
+
+  class TreeNode:
+      def __init__(self, val=0, left=None, right=None):
+          self.val = val
+          self.left = left
+          self.right = right
+  ​
+  def inorder_traversal(root):
+      # Your code here
+      result = []
+      recurse(root, result)
+      return result
+  ​
+  def recurse(root, result):
+      if root is None:
+          return 
+  ​
+      recurse(root.left, result)
+      result.append(root.val)
+      recurse(root.right, result)
+
