@@ -23,3 +23,9 @@
         - some edges have different weights
 
     4. DIRECTED ACYCLIC GRAPHS (DAG'S):
+
+
+
+2. ADJACENCY LIST + ADJACENCY MATRIX:
+
+  
