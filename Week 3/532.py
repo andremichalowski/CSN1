@@ -16,10 +16,10 @@
     Go to the right subtree
 
     class TreeNode:
-     def __init__(self, val=0, left=None, right=None):
-         self.val = val
-         self.left = left
-         self.right = right
+        def __init__(self, val=0, left=None, right=None):
+            self.val = val
+            self.left = left
+            self.right = right
 
     def helper(root, res):
         if root is None:
@@ -32,6 +32,22 @@
         result = []
         helper(root, result)
         return result
+
+    # root = TreeNode(val=1, left=node_2, right=node_3)
+    # root.left --> node with val 2
+
+    # 1
+    #  2
+    #   4
+    #    8
+    #    -> 8
+    #    ..
+    #   -> 4
+    #  -> 2
+    #  5
+    #   -> 5
+    #   ..
+    
 
 
   2. DEPTH FIRST (PREORDER) (Visit Node, Go Left, Go Right):

@@ -19,6 +19,7 @@
   ​
       return result 
       
+  1.B. *BREADTH* FIRST TRAVERSAL ITERAVELY: (NON RECURSIVE METHOD) (LATERAL STYLE)
   from collections import deque 
   ​
   def bft(root):
