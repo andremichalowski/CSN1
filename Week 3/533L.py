@@ -93,3 +93,52 @@ Repo: https://github.com/LambdaSchool/cs-guided-project-graphs-i
       print(node.color)
 
 
+3. NUMBER OF ISLANDS:
+
+from collections import deque
+​
+def numIslands(grid):
+
+    num_islands = 0 
+    rows = len(grid)
+    cols = len(grid[0])
+
+    for r, row in enumerate(grid):
+        for c, loc in enumerate(row):
+            if loc == '1':
+                num_islands += 1
+                # radiate out from this spot using a BFT 
+                queue = deque()
+                queue.append((r, c))
+                grid[r][c] = '0'
+                
+                while len(queue) > 0:
+                    current = queue.popleft()
+                    curr_r, curr_c = current[0], current[1]
+                    # check in all 4 cardinal directions make sure to check against whether our current spot is on the edge of our map check north 
+                    if curr_r - 1 >= 0 and grid[curr_r-1][curr_c] == '1':
+                        queue.append((curr_r-1, curr_c))
+                        grid[curr_r-1][curr_c] = '0' #toggle this spot
+​
+                    if curr_r + 1 < rows and grid[curr_r+1][curr_c] == '1': # check south
+                        queue.append((curr_r+1, curr_c))
+                        grid[curr_r+1][curr_c] = '0'
+
+                    if curr_c + 1 < cols and grid[curr_r][curr_c+1] == '1': # check east 
+                        queue.append((curr_r, curr_c+1))
+                        grid[curr_r][curr_c+1] = '0'
+
+                    if curr_c - 1 >= 0 and grid[curr_r][curr_c-1] == '1': # check west
+                        queue.append((curr_r, curr_c-1))
+                        grid[curr_r][curr_c-1] = '0'
+​
+    return num_islands
+​
+grid = [
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+]
+​
+print(numIslands(grid))
