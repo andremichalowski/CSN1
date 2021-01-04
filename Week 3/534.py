@@ -34,3 +34,30 @@ Next, we dequeue the current vert we've been exploring and mark that vert as bla
 We continue with this process until we have explored all the verts in the graph.
 
 
+2. REPRESENT A DEPTH FIRST SEARCH (DFS) OF A GRAPH IN PSUEDO CODE AND REVIEW TYPICAL APPLICATIONS FOR ITS USE:
+
+DFS(graph):
+    for v of graph.verts:
+        v.color = white
+        v.parent = null
+
+    for v of graph.verts:
+        if v.color == white:
+            DFS_visit(v)
+
+DFS_visit(v):
+    v.color = gray
+
+    for neighbor of v.adjacent_nodes:
+        if neighbor.color == white:
+            neighbor.parent = v
+            DFS_visit(neighbor)
+
+    v.color = black
+
+
+You can see that we have two functions in our pseudo-code above. The first function, DFS() takes the graph as a parameter and marks all the verts as unvisited (white). It also sets the parent of each vert to null. The next loop in this function visits each vert in the graph, and if it is unvisited, it passes that vert into our second function DFS_visit().
+
+DFS_visit() starts by marking the vert as gray (in the process of being explored). Then, it loops through all of its unvisited neighbors. In that loop, it sets the parent and then makes a recursive call to the DFS_visit(). Once it's done exploring all the neighbors, it marks the vert as black (visited).
+
+
