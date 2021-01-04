@@ -61,3 +61,72 @@ You can see that we have two functions in our pseudo-code above. The first funct
 DFS_visit() starts by marking the vert as gray (in the process of being explored). Then, it loops through all of its unvisited neighbors. In that loop, it sets the parent and then makes a recursive call to the DFS_visit(). Once it's done exploring all the neighbors, it marks the vert as black (visited).
 
 
+3. IMPLEMENT A BREADTH FIRST SEARCH:
+
+ Previously used "Vertex Class" and "Graph Class" (GC w/added BFS)
+
+
+ 1. Vertex:
+  class Vertex:
+    def __init__(self, value):
+        self.value = value
+        self.connections = {}
+
+    def __str__(self):
+        return str(self.value) + ' connections: ' + str([x.value for x in self.connections])
+
+    def add_connection(self, vert, weight = 0):
+        self.connections[vert] = weight
+
+    def get_connections(self):
+        return self.connections.keys()
+
+    def get_value(self):
+        return self.value
+
+    def get_weight(self, vert):
+        return self.connections[vert]
+
+
+    2. Graph (w/Breadth First Search):
+
+    class Graph:
+      def __init__(self):
+          self.vertices = {}
+          self.count = 0
+
+    def __contains__(self, vert):
+        return vert in self.vertices
+
+    def __iter__(self):
+        return iter(self.vertices.values())
+
+    def add_vertex(self, value):
+        self.count += 1
+        new_vert = Vertex(value)
+        self.vertices[value] = new_vert
+        return new_vert
+
+    def add_edge(self, v1, v2, weight = 0):
+        if v1 not in self.vertices:
+            self.add_vertex(v1)
+        if v2 not in self.vertices:
+            self.add_vertex(v2)
+        self.vertices[v1].add_connection(self.vertices[v2], weight)
+
+    def get_vertices(self):
+        return self.vertices.keys()
+
+    def breadth_first_search(self, starting_vert):
+        to_visit = Queue()
+        visited = set()
+        to_visit.enqueue(starting_vert)
+        visited.add(starting_vert)
+        while to_visit.size() > 0:
+            current_vert = to_visit.dequeue()
+            for next_vert in current_vert.get_connections():
+                if next_vert not in visited:
+                    visited.add(next_vert)
+                    to_visit.enqueue(next_vert)
+
+
