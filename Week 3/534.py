@@ -130,3 +130,43 @@ DFS_visit() starts by marking the vert as gray (in the process of being explored
                     to_visit.enqueue(next_vert)
 
 
+4. IMPLEMENTING A DEPTH FIRST SEARCH:
+
+  Previously used "Vertex Class" and "Graph Class" (GC w/added DFS)
+
+  1. Vertex:
+    - (See above)
+    
+  2. Graph (With DFS added):
+  class Graph:
+      def __init__(self):
+          self.vertices = {}
+          self.count = 0
+
+      def __contains__(self, vert):
+          return vert in self.vertices
+
+      def __iter__(self):
+          return iter(self.vertices.values())
+
+      def add_vertex(self, value):
+          self.count += 1
+          new_vert = Vertex(value)
+          self.vertices[value] = new_vert
+          return new_vert
+
+      def add_edge(self, v1, v2, weight = 0):
+          if v1 not in self.vertices:
+              self.add_vertex(v1)
+          if v2 not in self.vertices:
+              self.add_vertex(v2)
+          self.vertices[v1].add_connection(self.vertices[v2], weight)
+
+      def get_vertices(self):
+          return self.vertices.keys()
+
+      def depth_first_search(self, vertex, visited = set()):
+          visited.add(vertex)
+          for next_vert in vertex.get_connections():
+              if next_vert not in visited:
+                  self.depth_first_search(next_vert, visited)
