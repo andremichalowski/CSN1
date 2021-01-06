@@ -53,4 +53,30 @@ hash_table.remove("b")
 print(hash_table.get("b"))
 Collapse
 
-2. 
+2. ARE WORDS SORTED:
+
+def are_words_sorted(words, alpha_order):
+    lookup_table = {} # doing the same thing (creating a lookup table) using a comprehension # lookup_table = {letter: index for index, letter in enumerate(alpha_order)}
+    for index, letter in enumerate(alpha_order):
+        lookup_table[letter] = index
+    # do an is_sorted check but refer to the alternate ordering instead 
+    return is_sorted(words, lookup_table)
+​
+def is_sorted(words, lookup_table):
+    for i in range(1, len(words)):
+        word1 = words[i-1]
+        word2 = words[i]
+​
+        length_of_shorter_word = min(len(word1), len(word2))
+​
+        for k in range(length_of_shorter_word):
+            letter1 = word1[k]
+            letter2 = word2[k]
+​
+            if lookup_table[letter1] > lookup_table[letter2]:
+                return False 
+                
+        if len(word1) > len(word2):
+            return False 
+​
+    return True
