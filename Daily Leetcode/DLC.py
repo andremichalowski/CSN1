@@ -1,4 +1,14 @@
-# 1. REMOVE DUPLICATES:
+1. REMOVE DUPLICATES:
+
+ def removeDuplicates(self, nums):
+        len_ = 1
+        if len(nums)==0:
+            return 0
+        for i in range(1,len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[len_] = nums[i]
+                len_ +=1
+        return len_
 
 # 2. BEST TIME TO BUY AND SELL STOCK:
 
