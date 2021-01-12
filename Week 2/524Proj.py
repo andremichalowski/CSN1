@@ -8,9 +8,9 @@
 
   Keywords that show logarithms are involved:
 
-  Double, divide in half, binary search, the hight of a tree
+  >>> Double, divide in half, binary search, the hight of a tree
 
-  ???(height of tree, selection sort, divide in half, double, linear search, none of above)
+  #(height of tree, selection sort, divide in half, double, linear search, none of above)
 
 
 3. SELECTSEARCHING ALGORITHM:
