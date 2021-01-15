@@ -19,3 +19,23 @@
   #   “We worked independently and as a team to overcome numerous obstacles along the way.”
 
 ...
+1. USERFLOW:
+  What is a user story? - informal explanation from perspective of end user:
+    "As a user, I can back up my entire hard drive."
+    "As a user, I can indicate folders not to backup so that my backup drive isn't filled up with things I don't need to have saved."
+
+
+2. WIREFRAMES AND DESIGNS:
+  ...
+
+3. PLAN CRITQUE AND POWER STATEMENTS:
+  ...
+
+4. MODULE INQUIRY 1:
+  - https://docs.google.com/document/d/11XRdk3WSwrByL_vqtUAOOr_W9o4pz-ea26Lx4f63RiI/edit?usp=sharing
+
+5. ENGINEERING: 
+  ...
+
+6. GITHUB:
+
