@@ -209,3 +209,8 @@ Use Counter to make it cleaner:
     def is_unit_valid(self, unit):
         unit = [i for i in unit if i != '.']
         return len(set(unit)) == len(unit)
+
+
+11. ROTATE AN IMAGE: (Rotate a matrix):
+
+
