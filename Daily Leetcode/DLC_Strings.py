@@ -30,3 +30,12 @@
           return idx     
   return -1
 
+
+4. ANAGRAM:
+
+  if len(s) != len(t):
+    return False
+  return sorted(s) == sorted(t)
+
+
+5. 
