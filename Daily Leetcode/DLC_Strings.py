@@ -38,4 +38,13 @@
   return sorted(s) == sorted(t)
 
 
-5. 
+5. VALID PALINDROME:
+
+  def isPalindrome(self, s: str) -> bool:
+    # nS = s.replace("\W+", "")
+    # return nS[0:(len(s)//2)] == nS[(len(s)//2):(len(s))]
+    
+    s = ''.join(e for e in s if e.isalnum()).lower()
+    return s==s[::-1]
+
+    
