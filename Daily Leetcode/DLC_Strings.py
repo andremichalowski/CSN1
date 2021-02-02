@@ -109,7 +109,7 @@ def myAtoi(self, str: str) -> int:
     else: return intval
 
 
-10. IMPLEMENT strStr(): 
+10. NEEDLE IN A HAYSTACK: IMPLEMENT strStr(): 
 
 def strStr(self, haystack: str, needle: str) -> int:
     # return haystack.find(needle)
@@ -119,5 +119,3 @@ def strStr(self, haystack: str, needle: str) -> int:
     return -1
 
     http://tpcg.io/viJ4qzqG
-
-
