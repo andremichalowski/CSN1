@@ -107,3 +107,17 @@ def myAtoi(self, str: str) -> int:
     if intval<=-2**31: return -2**31
     elif intval>=2**31-1: return 2**31-1
     else: return intval
+
+
+10. IMPLEMENT strStr(): 
+
+def strStr(self, haystack: str, needle: str) -> int:
+    # return haystack.find(needle)
+    for i in range(len(haystack) - len(needle)+1):
+        if haystack[i:i+len(needle)] == needle:
+            return i
+    return -1
+
+    http://tpcg.io/viJ4qzqG
+
+
