@@ -149,3 +149,23 @@ def strStr(self, haystack: str, needle: str) -> int:
 
 
     print(countAndSay(34556))
+
+
+12. LONGEST COMMON PREFIX:
+    def longestCommonPrefix(self, strs):
+        # Edge case for no entry
+        if not strs:
+            return ""
+        # find and define shortest string 
+        shortest = min(strs,key=len)
+        # enumerate shortest
+        for i, ch in enumerate(shortest):
+            # iterate strings from og str list
+            for other in strs:
+                # if a string in that list at point [i] != character from the iteration of "shortest" ...???
+                # (Shouldn't this be for any string at point other[:i] != character from the iteration of "shortest" )
+                if other[i] != ch:
+                    # return "shortest" sliced at the recent length where str's match ends
+                    return shortest[:i]
+        return shortest 
+    
