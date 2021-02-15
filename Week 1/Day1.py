@@ -273,7 +273,7 @@ Here is an example of a few different ways you can use a range as the iterable f
 for x in range(5):
     print(x):
 
-# Prints 2, 3, 4, 5, 6
+# Prints 2, 3, 4, 5, 6%
 for x in range(2, 7):
     print(x)
 
