@@ -17,6 +17,8 @@
 
   # LC SOLUTION:
   def deleteNode(self, node):
+    # You are removing making node the value of the next node and then connecting to next next 
+    # In a way this is like deleting node and node next and inserting a node that = node next in their place
     node.val = node.next.val
     node.next = node.next.next
 
@@ -46,3 +48,22 @@
 
     prev.next = cur_node.next
     cur_node = None
+
+2. REMOVE NTH NODE FROM THE LIST:
+
+  def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        dummy = ListNode(0, head)
+        left = dummy
+        right = head
+        
+        while n > 0 and right:
+            right = right.next
+            n -= 1
+            
+        while right:
+            left = left.next
+            right = right.next
+            
+        left.next = left.next.next
+        return dummy.next
+    
