@@ -52,18 +52,19 @@
 2. REMOVE NTH NODE FROM THE LIST:
 
   def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
+        # Establish dummy list and 2pointers
         dummy = ListNode(0, head)
         left = dummy
         right = head
-        
+        #  keep shifting right one and decrement by 1
         while n > 0 and right:
             right = right.next
             n -= 1
-            
+        # keep shifting until right reaches end of list
         while right:
             left = left.next
             right = right.next
-            
+        # delete the node + return list w/out dummy 
         left.next = left.next.next
         return dummy.next
     
