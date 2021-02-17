@@ -67,4 +67,15 @@
         # delete the node + return list w/out dummy 
         left.next = left.next.next
         return dummy.next
-    
+
+
+3. REVERSE A LINKED LIST:
+
+  def reverseList(l) -> ListNode:
+    new_l = None
+          while l:
+              l.next, l, new_l = new_l, l.next, l
+          return new_l
+
+
+
