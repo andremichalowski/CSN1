@@ -127,3 +127,12 @@
   #     # if equivalent then rev become None, return True; otherwise return False 
   #     return not rev
 
+  def isPalindrome(self, head):
+    vals = []
+    while head:
+        vals += head.val,
+        head = head.next
+    return vals == vals[::-1]
+
+
+6. 
