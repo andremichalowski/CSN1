@@ -23,21 +23,17 @@ https://www.youtube.com/watch?v=MILxfAbIhrE
   # Returns true if the given tree is a binary search tree 
   # (efficient version) 
   def isBST(node): 
-      return (isBSTUtil(node, INT_MIN, INT_MAX)) 
-    
+      return (isBSTUtil(node, INT_MIN, INT_MAX))
   # Retusn true if the given tree is a BST and its values 
   # >= min and <= max 
-  def isBSTUtil(node, mini, maxi): 
-        
+  def isBSTUtil(root, min, max): 
       # An empty tree is BST 
-      if node is None: 
+      if root is None: 
           return True
-    
-      # False if this node violates min/max constraint 
-      if node.data < mini or node.data > maxi: 
+      # False if this root violates min/max constraint 
+      if root.data <= min or root.data > max: 
           return False
-    
       # Otherwise check the subtrees recursively 
       # tightening the min or max constraint 
-      return (isBSTUtil(node.left, mini, node.data -1) and
-            isBSTUtil(node.right, node.data+1, maxi)) 
+      return (isBSTUtil(root.left, min, root.data) and #root left becomes root, -infinity becomes min, original root becomes max 
+            isBSTUtil(root.right, root.data, max)) # root right becomes root, original root becomes min, and infinity becomes max
