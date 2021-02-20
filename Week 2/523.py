@@ -23,7 +23,7 @@
     - Space = 0(n)
     - Time = O(1)
 
-    Push - add to top
+    Push/append - add to top
     Pop - remove from top
     Peek - inspect top
 
