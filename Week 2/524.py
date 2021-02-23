@@ -23,3 +23,10 @@
     # REVERSE: for idx in reversed(range(len(arr))):
 
 3. RECURSION:
+
+
+def sum_list(items):
+    sum = 0
+    for i in items:
+        sum = sum + i
+    return sum
