@@ -98,3 +98,5 @@
             max = mid_guess - 1
     # no match was found
     return -1
+
+    #BINARY SEARCH CHANGES MADE
