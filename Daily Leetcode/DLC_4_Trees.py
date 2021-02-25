@@ -37,3 +37,50 @@ https://www.youtube.com/watch?v=MILxfAbIhrE
       # tightening the min or max constraint 
       return (isBSTUtil(root.left, min, root.data) and #root left becomes root, -infinity becomes min, original root becomes max 
             isBSTUtil(root.right, root.data, max)) # root right becomes root, original root becomes min, and infinity becomes max
+
+
+3. IS SYMETRIC:
+
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+    def isSymmetric(self, root):
+        if root is None:
+          return True
+        else:
+          return self.isMirror(root.left, root.right)
+
+    def isMirror(self, left, right):
+        if left is None and right is None:
+          return True
+        if left is None or right is None:
+          return False
+
+        if left.val == right.val:
+          outPair = self.isMirror(left.left, right.right)
+          inPiar = self.isMirror(left.right, right.left)
+          return outPair and inPiar
+        else:
+          return False
+
+    def isSymetric(self, root):
+        if root is None:
+            return True
+        else:
+            return self.isMirror(root.left, root.right)
+
+    def isMirror(self, left, right):
+        if left is None and right is None:
+            return True
+        if left is None or right is None:
+            return False
+        
+        if left.val == right.val:
+            outPair = self.isMirror(left.left, right.right)
+            inPair = self.isMirror(left.right, right.left)
+            return outPair and inPair
+        else:
+            return False
