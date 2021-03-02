@@ -39,6 +39,7 @@ https://www.youtube.com/watch?v=MILxfAbIhrE
             isBSTUtil(root.right, root.data, max)) # root right becomes root, original root becomes min, and infinity becomes max
 
 
+
 3. IS SYMETRIC:
 
 # class TreeNode:
@@ -84,3 +85,18 @@ https://www.youtube.com/watch?v=MILxfAbIhrE
             return outPair and inPair
         else:
             return False
+
+
+4. BINARY TREE LEVEL ORDER TRAVERSAL:
+
+def levelOrder(self, root):
+        if not root:
+            return []
+        ans, level = [], [root]
+        while level:
+            ans.append([node.val for node in level])
+            temp = []
+            for node in level:
+                temp.extend([node.left, node.right])
+            level = [leaf for leaf in temp if leaf]
+        return ans
