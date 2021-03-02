@@ -101,7 +101,7 @@ def levelOrder(self, root):
             level = [leaf for leaf in temp if leaf]
         return ans
 
-5. CONVERT SORTED ARRAY TO BINARY SEARCH TREE:
+5. CONVERT SORTED ARRAY TO (HEIGHT BALANCED) BINARY SEARCH TREE:
 
      def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
         if not nums:
