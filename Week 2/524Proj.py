@@ -1,4 +1,4 @@
-51. CSLOGARITHMICEXPRESSION:
+1. CSLOGARITHMICEXPRESSION:
 
   Which logarithmic expresison is identical to the following exponential expression?
     2^n = 64 >>> n = log_2 64
@@ -6,9 +6,9 @@
 
 2. LOGARITHM KEYWORDS:
 
-  Keywords that show logarithms are involved?
+  Keywords that show logarithms are involved:
 
-  binary search + divide in half <<<
+  Double, divide in half, binary search, the hight of a tree
 
   ???(height of tree, selection sort, divide in half, double, linear search, none of above)
 
@@ -37,6 +37,8 @@
     return False
 
     What must be true for this algorithm to work?
+
+    >>>>item_list must be sorted from smallest to greatest
 
 
 5. FIBONACCI SIMPLE SUM:
