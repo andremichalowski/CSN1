@@ -77,3 +77,5 @@
               digits[:-1] = self.plusOne(digits[:-1])
               return digits  
         
+        
+7. INTERSECTION OF TWO ARRAYS:      
