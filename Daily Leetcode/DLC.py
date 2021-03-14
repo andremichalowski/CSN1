@@ -81,3 +81,5 @@
 7. INTERSECTION OF TWO ARRAYS:      
 
 (Daily Leetcode January 9th)
+
+8. MOVE ZEROES:
