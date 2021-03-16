@@ -69,6 +69,22 @@ def condense_linked_list(node):
     #     current = current.next
     
     # return node
+    def condense_linked_list(node):
+    
+        if node is None:
+            return None
+
+        curr = node
+        while curr is not None:
+            inner = curr
+            while inner.next is not None:
+                if inner.next.value == curr.value:
+                    inner.next = inner.next.next
+                else:
+                    inner = inner.next
+            curr = curr.next
+
+        return node
 
 2. FIRST NON REPEATING CHARACTER:
 

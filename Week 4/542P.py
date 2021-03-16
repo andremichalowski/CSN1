@@ -1,6 +1,12 @@
-1. 
+1. HOW TO COMPUTE LOAD FACTOR:
 
-2. 
+    >>>> The number of items stored in a hash table divided by the total number of slots.
+
+2. IMPORTANCE OF LOAD FACTOR OF HASH TABLE:
+
+    >>>> As the load factor of your hash table increases, so does the likelihood of a collision,
+    which reduces your hash table's performance. It is important to monitor the load
+    factor and resize your hash table when the load factor gets too large. 
 
 3. ISOMETRIC STRINGS:
 

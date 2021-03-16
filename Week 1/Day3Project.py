@@ -14,6 +14,7 @@ def do_lots_of_things(items):
   for num in range(100):
     print(num)
 
+>>>> O(n)    #not O(log n) or O(n^2) or O(1)
 -----------------------------------------------
 
 2. csSpaceComplexity:
@@ -30,6 +31,8 @@ def do_a_couple_things(n):
   
   return my_list
   
+  O(n)       #not O(log n) or O(n^2) or O(1)
+
 -----------------------------------------------
   
 

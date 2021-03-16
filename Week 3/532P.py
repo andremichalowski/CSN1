@@ -35,17 +35,17 @@
   #     self.left = None
   #     self.right = None
   def binaryTreeInOrderTraversal(root):
-      # def helper(root, res):
-      #     if root is None:
-      #         return
-      #     helper(root.left, res)
-      #     res.append(root.value)
-      #     helper(root.right, res)
-
-      # def inorder_traversal(root):
-      #     result = []
-      #     helper(root, result)
-      #     return result
+    result = []
+    
+    def helper(root, res):
+        if root is None:
+            return
+        helper(root.left, res)
+        res.append(root.value)
+        helper(root.right, res)
+    
+    helper(root, result)
+    return result
 
 8. ITERATIVE TREE TRAVERSAL: #SAME TREE AS #7
 
