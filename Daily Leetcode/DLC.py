@@ -140,3 +140,31 @@ Use Counter to make it cleaner:
 
 
 8. MOVE ZEROES:
+
+    # class Solution:
+    #     def moveZeroes(self, nums: List[int]) -> None:
+    #         """
+    #         Do not return anything, modify nums in-place instead.
+    #         """
+    #         for i in range(len(nums)):
+    #             if nums[i] == 0:
+    #                 zero = nums.pop(i)
+    #                 nums.append(zero)
+    #             else:
+    #                 continue
+
+    # for i in range(len(nums)):
+            # if nums[i] == 0:
+            #     nums.remove(nums[i])
+            #     nums.append(0)
+            # else:
+            #     continue
+            # return nums
+    # in-place
+    def moveZeroes(self, nums):
+        zero = 0  # records the position of "0"
+        for i in xrange(len(nums)):
+            if nums[i] != 0:
+                nums[i], nums[zero] = nums[zero], nums[i]
+                zero += 1
+
