@@ -33,7 +33,7 @@
     return max(nums)
 
 
-https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/576/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
+# https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/576/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
 
 7. HOUSE ROBBER:
 
@@ -48,5 +48,5 @@ https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynam
       }
       return prev1;
   }
-  
+
 
