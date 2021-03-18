@@ -168,3 +168,13 @@ Use Counter to make it cleaner:
                 nums[i], nums[zero] = nums[zero], nums[i]
                 zero += 1
 
+9. TWO SUM: (Sum of two nums in array = target):
+
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for i, n in enumerate(nums):
+            m = target - n
+            if m in d:
+                return [d[m], i]
+            else:
+                d[n] = i
