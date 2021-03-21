@@ -39,3 +39,8 @@
 
 6. GITHUB:
 
+7. MODULE INQUIRY 2:
+  - https://docs.google.com/document/d/13tUJBWrx43bbJNOtNVRgbDulMyBY3RBi1fm-x9x12sM/edit?usp=sharing
+
+
+
