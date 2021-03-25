@@ -19,3 +19,14 @@
             x //= 10
             
         return 0 if result > pow(2,31) else result * symbol
+
+
+3. FIRST UNIQUE CHARACTER: (HASH MAP)
+
+  count = collections.Counter(s)
+ 
+  for idx, ch in enumerate(s):
+      if count[ch] == 1:
+          return idx     
+  return -1
+
