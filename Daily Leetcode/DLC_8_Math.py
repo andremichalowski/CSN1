@@ -172,3 +172,11 @@
 
         return sum(strikes)
 
+3. POWER OF THREE: 
+https://leetcode.com/explore/featured/card/top-interview-questions-easy/102/math/745/
+
+def isPowerOfThree(self, n: int) -> bool:
+    while n > 2:
+        if n % 3 > 0: return False
+        n = n / 3
+    return n == 1
