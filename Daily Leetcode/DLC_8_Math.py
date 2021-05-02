@@ -193,3 +193,24 @@ def romanToInteger(self, n):
         else:
             z += roman[s[i]]
     return z + roman[s[-1]]
+
+def romanToInteger(self, n):
+    # Define roman numerals as integers in an object
+    roman = {'M': 1000,'D': 500 ,'C': 100,'L': 50,'X': 10,'V': 5,'I': 1}
+    # Establish integer variable
+    z = 0
+    # loop range of length of given roman
+    for i in range(0, len(s) - 1):
+        # if roman numeral in loop is less than the next numeral value...
+        if roman[s[i]] < roman[s[i+1]]:
+            # Subtract the value of that roman from current z (may make negative)
+            z -= roman[s[i]]
+        # if roman in loop is more than next numeral value...
+        else:
+            # add that integer value to z
+            z += roman[s[i]]
+    # return z + ...?
+    return z + roman[s[-1]]
+    
+
+
