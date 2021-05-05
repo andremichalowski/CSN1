@@ -51,3 +51,5 @@
               new = new & (new-1)
               hamming_distance += 1
           return hamming_distance
+
+      May 5th Fix 
