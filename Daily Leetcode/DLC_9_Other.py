@@ -13,3 +13,11 @@
         n &= n - 1
         c += 1
     return c
+
+    2. Hamming Distance:
+
+      # Easy Way
+      bin(x ^ y).count('1')
+
+      #Right way (Bitwise Operators): https://code.tutsplus.com/articles/understanding-bitwise-operators--active-11301
+      
