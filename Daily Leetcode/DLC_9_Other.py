@@ -41,3 +41,15 @@
                   hamming_distance += 1
               new = new >> 1
           return hamming_distance
+
+      # Approach 3: Again make XOR of x and y but when we count the number of '1' bits
+      # we make the trick n&(n-1) which removes last '1' bit
+      def hammingDistance(self, x: int, y: int) -> int:
+          hamming_distance = 0
+          new = x ^ y
+          while new > 0:
+              new = new & (new-1)
+              hamming_distance += 1
+          return hamming_distance
+
+      May 5th Fix 
