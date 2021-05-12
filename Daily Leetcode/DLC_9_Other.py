@@ -30,3 +30,14 @@
               x = x >> 1
               y = y >> 1
           return hamming_distance
+
+      # Approach 2: Just make XOR of x and y and after that count the number of '1' bits.
+      # because XOR of two different bits is always 1
+      def hammingDistance(self, x: int, y: int) -> int:
+          hamming_distance = 0
+          new = x ^ y
+          while new > 0:
+              if new % 2 == 1:
+                  hamming_distance += 1
+              new = new >> 1
+          return hamming_distance
