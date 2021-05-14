@@ -58,8 +58,18 @@
 
     # https://leetcode.com/explore/featured/card/top-interview-questions-easy/99/others/648/discuss/54932/Three-different-solutions-in-python
     def reverseBits(self, n):
-            bit_str = '{0:032b}'.format(n) # Format n into bit string
+            bit_str = '{0:032b}'.format(n) # Format n into bit string (length of 32)
             reverse_str = bit_str[::-1] # Reverse bit_string with slice fxnality
             return int(reverse_str, 2) # Return string as int w/ 2 
             
-    
+4. Pascals Triangle: 
+    def generate(self, numRows):
+        lists = []
+        for i in range(numRows):
+            lists.append([1]*(i+1))
+            if i>1 :
+                for j in range(1,i):
+                    lists[i][j]=lists[i-1][j-1]+lists[i-1][j]
+        return lists
+
+        
