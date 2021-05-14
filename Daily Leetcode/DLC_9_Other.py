@@ -54,3 +54,12 @@
 
     # Good explanation of XOR solution: https://www.youtube.com/watch?v=UP4GhCxeC4I
 
+3. Reverse Bits (Reverse Bits of a 32 bits unsigned integer):
+
+    # https://leetcode.com/explore/featured/card/top-interview-questions-easy/99/others/648/discuss/54932/Three-different-solutions-in-python
+    def reverseBits(self, n):
+            bit_str = '{0:032b}'.format(n) # Format n into bit string
+            reverse_str = bit_str[::-1] # Reverse bit_string with slice fxnality
+            return int(reverse_str, 2) # Return string as int w/ 2 
+            
+    
