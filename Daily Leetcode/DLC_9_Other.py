@@ -119,3 +119,15 @@
             else:
                 stack.append(char)
         return not stack
+
+6. Missing Number: (Missing number in an array)
+    # One line
+    def missingNumber(self, nums):
+        return sum(range(len(nums)+1)) - sum(nums)
+
+    # Two lines
+    def missingNumber(self, nums):
+        n = len(nums)
+        return n * (n+1) / 2 - sum(nums)
+
+        
