@@ -1,20 +1,27 @@
 #Key Notes:
 
+FAMILIARIZING WITH METHODS (ETC):
+W3 Schools: https://www.w3schools.com/python/default.asp
+Udemy: https://github.com/Pierian-Data/Complete-Python-3-Bootcamp
 
+INTRODUCTION (EASIER):
+Codesignal Arcade: https://app.codesignal.com/arcade
+(^^^Be sure to log in with Lambda email because this is actually the app/module that Lambda uses for projects/testing down the line (as of now))
+Edabit: https://edabit.com
+CodeWars: https://www.codewars.com
+FreeCodeCamp: https://www.freecodecamp.org
+
+REFINING SKILLS (HARDER):
+Leetcode: https://leetcode.com
+HackerRank: https://www.hackerrank.com
+AlgoExpert: https://www.algoexpert.io/product 
+
+---------------------------------------------------
 
 NOTES:
 https://repl.it/@abdimohamud/Python-Notes#dictionaryMethods.py
 https://www.notion.so/Computer-Science-319751171eb247d3af876f08cd6d3001
 https://www.notion.so/Welcome-Lambda-Students-5986bd7f6c0d4e7bb51c51d3e394c394
-
-
-PRACTICE
-https://www.hackerrank.com/
-https://leetcode.com/explore/featured/card/top-interview-questions-easy/
-https://www.algoexpert.io/product
-https://www.codewars.com/dashboard
-udemy python?
-
 
 PRACTICE FOR GCA:
 https://app.codesignal.com/standardized-test/GgvonNCksGzjey46c
