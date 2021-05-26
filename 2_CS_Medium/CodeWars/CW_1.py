@@ -82,4 +82,9 @@
     # recursive addition of each digit**2 to a counter
     # return counter
 
-  
+  # Solution rep:
+  def square_digits(num):
+    output = ""
+    for digit in str(num):
+      output += str(int(digit) **2)
+    return int(output)
