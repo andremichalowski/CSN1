@@ -88,3 +88,21 @@
     for digit in str(num):
       output += str(int(digit) **2)
     return int(output)
+
+3. "UNIQUE IN ORDER": # Link: https://www.codewars.com/kata/54e6533c92449cc251001667/train/python
+  # Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+  # PSUEDO:
+    # Iterate through list and push to empty array
+      # Create memory variable
+      # Conditional if it equals same as memory var don't push to empty array
+    # return holder array
+
+  # SOLUTION:
+    def unique_in_order(iterable):
+      let unique = []
+      let last = ''
+      for char in list(str(iterable)):
+        if char != last:
+          unique.append(char)
+      return unique
