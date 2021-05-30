@@ -70,5 +70,10 @@
         # set to **2 for each
         # add to output
 
-  
+  # Solution:
+    def square_digits(num):
+      output = ""
+      for digit in str(num):
+        output += str(int(digit) **2)
+      return int(output)
 
