@@ -7,7 +7,6 @@
     # ITERATE THROUGH ARRAY * NUMBER OF DIGITS IN OG VALUE
     # CONDITIONAL TRUE IF EACH INT ^ #DIGITS = VALUE
 
-  ### Solution
 
   # 1. I make an array with the value. But I need to transform it to string first to make it happen. I build an array so I can iterate over each element.
   # 2. I create a variable `_result` who is a data store of the value.
@@ -16,6 +15,7 @@
   # 5. I make sure to add the value to the _result data store.
   # 6. We need to return only a boolean about if this is match or not.
 
+  ### Solution
   ```js
     function narcissistic(value) {
       const _value = String(value).split('');
@@ -31,3 +31,13 @@
       return _result === value;
     }
   ```
+
+  # PSUEDO Repetition:
+    # 1. make an array with individual string values by converting to string and spliting
+    # 2. set result for recursive additions later
+    # 3. loop over characters
+      # 4. set variable to integer versions of character using 'parseInt'
+      # 5. recurssive additions to result with 'Math.pow() using "num" and "value.length" '
+    # 6. return true or false check for result === value?
+
+  
