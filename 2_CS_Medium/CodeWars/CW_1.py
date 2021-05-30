@@ -77,3 +77,9 @@
         output += str(int(digit) **2)
       return int(output)
 
+  # Psuedo rep:
+    # iterate over split num with str()
+    # recursive addition of each digit**2 to a counter
+    # return counter
+
+  
