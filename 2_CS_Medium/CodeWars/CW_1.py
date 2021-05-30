@@ -15,7 +15,7 @@
   # 5. I make sure to add the value to the _result data store.
   # 6. We need to return only a boolean about if this is match or not.
 
-  ### Solution
+  ### Solution:
   ```js
     function narcissistic(value) {
       const _value = String(value).split('');
@@ -41,3 +41,17 @@
     # 6. return true or false check for result === value?
 
   
+  # Solution Repetition:
+    function Narcissistic(value) {
+      const _value = String(value).split('');
+
+      let result = 0;
+
+      for (ch in _value) {
+        let num = parseInt(ch, 0);
+
+        _result = Math.pow(num, _value.length);
+      }
+
+      return _result === value;
+    }
