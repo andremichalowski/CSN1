@@ -1,6 +1,8 @@
 1. "DOES MY NUMBER LOOK BIG IN THIS" (DETECT IF NUMBER IS NARCISSISTIC (SUM OF OWN DIGITS EACH RAISED TO POWER OF NUMBER OF DIGITS IN BASE)):
   # PROBLEM: https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/python
-  
+  # parsInt notes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+  # radix notes: https://www.google.com/search?q=what+is+radix+in+parseint&rlz=1C5CHFA_enUS827US828&oq=what+is+radix+in+pars&aqs=chrome.0.0j69i57j0i22i30l3j0i390l2.3857j0j7&sourceid=chrome&ie=UTF-8
+
   # SUDO:
     # SET VARIABLE = VALUE
     # SPLIT VARIABLE INTO INDIVIDUAL INTS...ARRAY?
@@ -55,3 +57,11 @@
 
       return _result === value;
     }
+
+2. "SQUARE EVERY DIGIT": 
+  # Question: https://www.codewars.com/kata/546e2562b03326a88e000020/train/python
+    # Square every digit of a number and concatenate them.
+    # For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+  
+
