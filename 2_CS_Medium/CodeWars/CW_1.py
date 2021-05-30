@@ -105,4 +105,13 @@
       for char in list(str(iterable)):
         if char != last:
           unique.append(char)
+          last = char
       return unique
+
+  # Psuedo:
+    # Iterate over list 
+    # If item in list != last item
+      # Append to new array
+    # Return new array
+
+  
