@@ -21,4 +21,3 @@
 
 3. BUDDY STRINGS:
 
-Test
