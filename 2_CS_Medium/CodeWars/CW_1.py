@@ -63,5 +63,12 @@
     # Square every digit of a number and concatenate them.
     # For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
 
+  # Psuedo 1:
+    # Iterate each int in num:
+      # split num to ints (or str)
+      # loop over each int (or str)
+        # set to **2 for each
+        # add to output
+
   
 
