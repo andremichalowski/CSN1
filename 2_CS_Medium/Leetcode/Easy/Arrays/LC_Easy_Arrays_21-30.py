@@ -89,7 +89,7 @@
 
 
 28. 349 - INTERSECTION OF TWO ARRAYS (Return an arr of the intersection of arr):
-  
+  return list(set(nums1) & set(nums2))
 
 29. 349 - INTERSECTION OF TWO ARRAYS II (Return an arr of the intersection of two arrs):
   # Two pointers
