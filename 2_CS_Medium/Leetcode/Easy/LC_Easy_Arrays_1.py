@@ -1,7 +1,14 @@
 from _typeshed import OpenBinaryMode
 
 
-1. 1 - TWO SUM:
+1. 1 - TWO SUM (Given an array ints and an int target: return indices of two numbers that add to target):
+  class Solution(object):
+    def twoSum(self, nums, target):
+        d={}
+        for i,num in enumerate(nums):
+            if target-num in d:
+                return d[target-num], i
+            d[num]=i
 
 2. 26 - REMOVE DUPLICATES FROM SORTED ARRAY:
 
