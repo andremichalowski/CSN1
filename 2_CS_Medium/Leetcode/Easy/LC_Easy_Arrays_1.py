@@ -10,7 +10,16 @@ from _typeshed import OpenBinaryMode
                 return d[target-num], i
             d[num]=i
 
-2. 26 - REMOVE DUPLICATES FROM SORTED ARRAY:
+2. 26 - REMOVE DUPLICATES FROM SORTED ARRAY (Given nums, remove duplicates (in place)):
+
+  def removeDuplicates(self, nums: List[int]) -> int:
+    index = 1
+    while index < len(nums):
+        if nums[index] == nums[index-1]: #check dup
+            nums.pop(index)
+        else:
+            index += 1 #move cursor
+    return len(nums)
 
 3. 27 - REMOVE ELEMENT:
 
