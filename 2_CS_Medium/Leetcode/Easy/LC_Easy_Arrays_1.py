@@ -21,7 +21,15 @@ from _typeshed import OpenBinaryMode
             index += 1 #move cursor
     return len(nums)
 
-3. 27 - REMOVE ELEMENT:
+3. 27 - REMOVE ELEMENT (Given nums and val remove all instance of val in nums (in place)):
+
+  def removeElement(self, nums, val):
+    i = 0
+    for x in nums:
+        if x != val:
+            nums[i] = x
+            i += 1
+    return i
 
 4. 35 - SEARCH INSERT POSITION:
 
