@@ -31,8 +31,16 @@ from _typeshed import OpenBinaryMode
             i += 1
     return i
 
-4. 35 - SEARCH INSERT POSITION:
+4. 35 - SEARCH INSERT POSITION (Given sorted arr and val, return index of val if found : index where it would be):
 
+  def searchInsert(self, nums, target):
+        if target in nums:
+            return nums.index(target)
+        else:
+            nums.append(target)
+            nums.sort()
+            return nums.index(target)
+            
 5. 53 - MAXIMUM SUBARRAY:
 
 6. 66 - PLUS ONE:
