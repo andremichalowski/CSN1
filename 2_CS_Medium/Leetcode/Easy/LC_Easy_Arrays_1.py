@@ -40,8 +40,10 @@ from _typeshed import OpenBinaryMode
             nums.append(target)
             nums.sort()
             return nums.index(target)
-            
-5. 53 - MAXIMUM SUBARRAY:
+
+5. 53 - MAXIMUM SUBARRAY (Find max subarray in nums and return its sum):
+
+  
 
 6. 66 - PLUS ONE:
 
