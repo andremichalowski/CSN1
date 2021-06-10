@@ -53,7 +53,7 @@ from _typeshed import OpenBinaryMode
     # If the sum is negative, it has no use to the next element, so we break.
     # it is a game of sum, not the elements.
   
-6. 66 - PLUS ONE:
+6. 66 - PLUS ONE (Convert list of ints into a single int comprised of those ints in order):
 
   def plusOne(digits):
     num = 0
@@ -64,7 +64,17 @@ from _typeshed import OpenBinaryMode
   # We're given a list of digits, and the idea here is to convert that list to an integer, num. So each digit is multiplied by the proper place value and added to num. For example, if digits = [3, 8, 2, 5] then on the first iteration 3 is multiplied by 10 to the power of 4-1-0 = 3, so this results in 3000, which is added to num. Then 8 is multiplied by 10^2 and added to num, and so on.
   # The last step is to add 1 to num, convert it to a list and return that list.
 
-7. 88 - MERGE SORTED ARRAY:
+7. 88 - MERGE SORTED ARRAY (Merge two arrays and sort them. Ignore zeros):
+
+  def merge(self, nums1, m, nums2, n):
+        while m > 0 and n > 0:
+            if nums1[m - 1] > nums2[n - 1]:
+                nums1[m + n - 1] = nums1[m - 1]
+                m -= 1
+            else:
+                nums1[m + n - 1] = nums2[n - 1]
+                n -= 1
+        nums1[:n] = nums2[:n]
 
 8. 108 - CONVERT SORTED ARRAY TO BINARY SEARCH:
 
