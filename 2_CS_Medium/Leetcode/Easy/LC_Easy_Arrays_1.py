@@ -67,16 +67,27 @@ from _typeshed import OpenBinaryMode
 7. 88 - MERGE SORTED ARRAY (Merge two arrays and sort them. Ignore zeros):
 
   def merge(self, nums1, m, nums2, n):
-        while m > 0 and n > 0:
-            if nums1[m - 1] > nums2[n - 1]:
-                nums1[m + n - 1] = nums1[m - 1]
-                m -= 1
-            else:
-                nums1[m + n - 1] = nums2[n - 1]
-                n -= 1
-        nums1[:n] = nums2[:n]
+    while m > 0 and n > 0:
+        if nums1[m - 1] > nums2[n - 1]:
+            nums1[m + n - 1] = nums1[m - 1]
+            m -= 1
+        else:
+            nums1[m + n - 1] = nums2[n - 1]
+            n -= 1
+    nums1[:n] = nums2[:n]
 
-8. 108 - CONVERT SORTED ARRAY TO BINARY SEARCH:
+8. 108 - CONVERT SORTED ARRAY TO BINARY SEARCH (Convert nums into height-balanced BST):
+
+  def sortedArrayToBST(self, nums):
+    def convert(left, right):
+        if left > right:
+            return None
+        mid = (left + right) // 2
+        node = TreeNode(nums[mid])
+        node.left = convert(left, mid - 1)
+        node.right = convert(mid + 1, right)
+        return node
+    return convert(0, len(nums) - 1)
 
 9. 118 - PASCALS TRIANGLE:
 
