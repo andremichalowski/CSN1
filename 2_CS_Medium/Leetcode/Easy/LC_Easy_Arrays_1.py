@@ -89,6 +89,13 @@ from _typeshed import OpenBinaryMode
         return node
     return convert(0, len(nums) - 1)
 
-9. 118 - PASCALS TRIANGLE:
+9. 118 - PASCALS TRIANGLE (Given a number of rows return an array of the ints that are summed):
+
+  def generate(numRows):
+    pascal = [[1]*(i+1) for i in range(numRows)]
+    for i in range(numRows):
+        for j in range(1,i):
+            pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j]
+    return pascal
 
 10. 119 - PASCALS TRAINGLE II:
