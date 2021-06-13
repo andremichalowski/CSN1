@@ -98,4 +98,11 @@ from _typeshed import OpenBinaryMode
             pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j]
     return pascal
 
-10. 119 - PASCALS TRAINGLE II:
+10. 119 - PASCALS TRAINGLE II (Given a row number return the array of the numbers at that row):
+
+  def getRow(rowIndex):
+    pascal = [1]*(rowIndex + 1)
+    for i in range(2,rowIndex+1):
+        for j in range(i-1,0,-1):
+            pascal[j] += pascal[j-1]
+    return pascal
