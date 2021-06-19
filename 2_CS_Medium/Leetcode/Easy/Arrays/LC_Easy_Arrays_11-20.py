@@ -15,3 +15,14 @@
     for i in range(len(prices) - 1):
         max_profit += max(prices[i+1] - prices[i], 0)
     return max_profit
+
+3. 136 - SINGLE NUMBER (Find the single number in an arr of duplicates (Linear runtime, const extra space)):
+  
+  def singleNumber1(self, nums):
+    dic = {}
+    for num in nums:
+        dic[num] = dic.get(num, 0)+1
+    for key, val in dic.items():
+        if val == 1:
+            return key
+
