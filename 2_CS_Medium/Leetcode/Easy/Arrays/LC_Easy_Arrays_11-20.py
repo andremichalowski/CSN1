@@ -123,3 +123,8 @@
                 for j in range(i * i, n, i):
                     primes[j] = False
         return sum(primes)
+
+9. 217 - CONTAINS DUPLICATE (Nums. dupes ? true : false):
+
+    def containsDuplicate(self, nums):
+        return len(nums) > len(set(nums))
