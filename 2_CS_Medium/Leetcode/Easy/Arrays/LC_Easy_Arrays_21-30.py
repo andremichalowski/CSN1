@@ -51,3 +51,14 @@
 24. 268 - MISSING NUMBER (Find the missing number in the range):
   def missingNumber(self, nums):
         return sum(range(len(nums)+1)) - sum(nums)
+
+
+25. 283 - MOVE ZEROES (to the end):
+  def moveZeroes(self, nums):
+    if nums and len(nums) > 1:
+        j = 0
+        for i in range(len(nums)):
+            if nums[i]:
+                if not nums[j]: # check if necessary to swap
+                    nums[i], nums[j] = nums[j], nums[i]
+                j += 1
