@@ -86,3 +86,7 @@
         if len(self.queue) > self.Max_size:
             self.queue.popleft()
         return 1.0 * sum(self.queue) / len(self.queue)
+
+
+28. 349 - INTERSECTION OF TWO ARRAYS (Return an arr of the intersection of arr):
+  
