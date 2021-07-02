@@ -90,3 +90,40 @@
 
 28. 349 - INTERSECTION OF TWO ARRAYS (Return an arr of the intersection of arr):
   
+
+29. 349 - INTERSECTION OF TWO ARRAYS II (Return an arr of the intersection of two arrs):
+  # Two pointers
+  def intersect(self, nums1, nums2):
+    nums1, nums2 = sorted(nums1), sorted(nums2)
+    pt1 = pt2 = 0
+    res = []
+
+    while True:
+        try:
+            if nums1[pt1] > nums2[pt2]:
+                pt2 += 1
+            elif nums1[pt1] < nums2[pt2]:
+                pt1 += 1
+            else:
+                res.append(nums1[pt1])
+                pt1 += 1
+                pt2 += 1
+        except IndexError:
+            break
+
+    return res
+
+  # Dict
+  def intersect(self, nums1, nums2):
+  counts = {}
+  res = []
+
+  for num in nums1:
+      counts[num] = counts.get(num, 0) + 1
+
+  for num in nums2:
+      if num in counts and counts[num] > 0:
+          res.append(num)
+          counts[num] -= 1
+
+  return res
