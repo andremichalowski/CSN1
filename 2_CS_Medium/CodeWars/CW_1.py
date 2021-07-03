@@ -123,3 +123,5 @@
               result.append(item)
               pre_item = item
       return result
+
+4. 
