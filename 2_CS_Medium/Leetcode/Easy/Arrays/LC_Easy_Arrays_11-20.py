@@ -128,3 +128,13 @@
 
     def containsDuplicate(self, nums):
         return len(nums) > len(set(nums))
+
+10. 218 - CONTAINS DUPLICATE II ():
+
+    def containsNearbyDuplicate(self, nums, k):
+    dic = {}
+    for i, v in enumerate(nums):
+        if v in dic and i - dic[v] <= k:
+            return True
+        dic[v] = i
+    return False
