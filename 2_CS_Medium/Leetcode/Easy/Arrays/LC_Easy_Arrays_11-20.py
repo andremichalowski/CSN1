@@ -85,7 +85,7 @@
             else:
                 r = mid-1
 
-6. 169 - Majority Element (nums. Find n the majority element.):
+6. 169 - MAJORITY ELEMENT(nums. Find n the majority element.):
   class Solution(object):
     def majorityElement1(self, nums):
         nums.sort()
@@ -108,3 +108,7 @@
         else:
             count -= 1
     return candidate
+
+7. 170 - TWO SUM III:
+
+8. 
