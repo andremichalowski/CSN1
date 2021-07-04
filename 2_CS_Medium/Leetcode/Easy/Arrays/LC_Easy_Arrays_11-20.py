@@ -84,3 +84,9 @@
                 l = mid+1
             else:
                 r = mid-1
+
+6. 169 - Majority Element (nums. Find n the majority element.):
+  class Solution(object):
+    def majorityElement1(self, nums):
+        nums.sort()
+        return nums[len(nums)//2]
