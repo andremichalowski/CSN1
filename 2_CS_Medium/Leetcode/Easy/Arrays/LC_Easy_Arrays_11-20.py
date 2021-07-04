@@ -48,3 +48,13 @@
         pre = cur
         
     return ranges
+
+5. 167 - Two Sum II - Input array is sorted (Numbers. Find two int that add to target):
+
+  # Dictionary
+  def twoSum2(self, numbers, target):
+    dic = {}
+    for i, num in enumerate(numbers):
+        if target-num in dic:
+            return [dic[target-num]+1, i+1]
+        dic[num] = i
