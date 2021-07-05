@@ -70,7 +70,17 @@
     def sumRange(self, i, j):
         return self.accu[j + 1] - self.accu[i]
 
-27. 346 - MOVING AVERAGE FROM DATA STREAM:
+27. 346 - MOVING AVERAGE FROM DATA STREAM (Find the average of the averages for each range as it increases an int):
+  class MovingAverage(object):
+    def __init__(self, size):
+        self.queue = deque()
+        self.Max_size = size
+
+    def next(self, val):
+        self.queue.append(val)
+        if len(self.queue) > self.Max_size:
+            self.queue.popleft()
+        return 1.0 * sum(self.queue) / len(self.queue)
 
 28. 350 - INTERSECTION OF TWO ARRAYS:
 
