@@ -19,8 +19,21 @@
         r[1:] = n,
     return ['->'.join(map(str, r)) for r in ranges]
 
-22. 243 - SHORTEST WORD DISTANCE:
+22. 243 - SHORTEST WORD DISTANCE (Find the shortest distance between two words in an arr of strs):
 
+  def shortestDistance(self, words, word1, word2):
+    dist = float("inf")
+    i, index1, index2 = 0, None, None
+    while i < len(words):
+        if words[i] == word1:
+            index1 = i
+        elif words[i] == word2:
+            index2 = i
+
+        if index1 is not None and index2 is not None:
+            dist = min(dist, abs(index1 - index2))
+        i += 1
+ 
 23. 252 - MEETING ROOMS:
 
 24. 268 - MISSING NUMBER:
