@@ -82,7 +82,10 @@
             self.queue.popleft()
         return 1.0 * sum(self.queue) / len(self.queue)
 
-28. 350 - INTERSECTION OF TWO ARRAYS (Return an arr of the intersection of arr):
+28. 349 - INTERSECTION OF TWO ARRAYS (Return an arr of the intersection of arr):
+  
+
+29. 349 - INTERSECTION OF TWO ARRAYS II (Return an arr of the intersection of two arrs):
   # Two pointers
   def intersect(self, nums1, nums2):
     nums1, nums2 = sorted(nums1), sorted(nums2)
@@ -104,21 +107,4 @@
 
     return res
 
-  # Dict
-  def intersect(self, nums1, nums2):
-  counts = {}
-  res = []
-
-  for num in nums1:
-      counts[num] = counts.get(num, 0) + 1
-
-  for num in nums2:
-      if num in counts and counts[num] > 0:
-          res.append(num)
-          counts[num] -= 1
-
-  return res
-
-29. 414 - THIRD MAXIMUM NUMBER:
-
-30. 422 - VALID WORD SQUARE:
+30. 414 - THIRD MAXIMUM NUMBER:
