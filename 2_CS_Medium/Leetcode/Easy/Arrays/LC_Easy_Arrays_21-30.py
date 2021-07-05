@@ -60,7 +60,15 @@
                     nums[i], nums[j] = nums[j], nums[i]
                 j += 1
 
-26. 303 - RANGE SUM QUERY IMMUTABLE:
+26. 303 - RANGE SUM QUERY IMMUTABLE (Handle the sum of arrs w/thin arr):
+  class NumArray(object):
+    def __init__(self, nums):
+        self.accu = [0]
+        for num in nums: 
+            self.accu += self.accu[-1] + num,
+
+    def sumRange(self, i, j):
+        return self.accu[j + 1] - self.accu[i]
 
 27. 346 - MOVING AVERAGE FROM DATA STREAM:
 
