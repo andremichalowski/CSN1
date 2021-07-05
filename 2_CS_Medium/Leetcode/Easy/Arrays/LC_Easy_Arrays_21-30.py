@@ -34,9 +34,19 @@
             dist = min(dist, abs(index1 - index2))
         i += 1
  
-23. 252 - MEETING ROOMS:
+23. 252 - MEETING ROOMS (Given an arr of diff start and end times determine all 'meeting' times could be attended):
+  
+  def canAttendMeetings(self, intervals):
+    if len(intervals) <= 1:
+        return True
 
-24. 268 - MISSING NUMBER:
+    intervals.sort(key=lambda i: i.start) # Returns index of the substring it matched
+    for i in range(len(intervals) - 1):
+        if intervals[i].end > intervals[i + 1].start:
+            return False
+    return True
+
+24. 268 - MISSING NUMBER (Find the missing number in the range):
 
 25. 283 - MOVE ZEROES:
 
