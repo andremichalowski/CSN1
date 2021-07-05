@@ -9,6 +9,16 @@
         ranges[-1][1:] = n,
     return ['->'.join(map(str, r)) for r in ranges]
 
+  # w/extra variable
+  def summaryRanges(self, nums):
+    ranges, r = [], []
+    for n in nums:
+        if n-1 not in r:
+            r = []
+            ranges += r,
+        r[1:] = n,
+    return ['->'.join(map(str, r)) for r in ranges]
+
 22. 243 - SHORTEST WORD DISTANCE:
 
 23. 252 - MEETING ROOMS:
