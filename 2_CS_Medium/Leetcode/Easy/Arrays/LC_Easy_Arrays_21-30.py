@@ -47,6 +47,8 @@
     return True
 
 24. 268 - MISSING NUMBER (Find the missing number in the range):
+  def missingNumber(self, nums):
+        return sum(range(len(nums)+1)) - sum(nums)
 
 25. 283 - MOVE ZEROES:
 
