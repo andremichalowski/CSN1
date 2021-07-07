@@ -1,6 +1,6 @@
 1. "422 - VALID WORD SQUARE Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums."
 
-
+(See https://www.youtube.com/watch?v=xJl_PE0Wu14)
 
 2. "448 - FIND ALL NUMBERS DISSAPPEARING"
 
