@@ -18,7 +18,16 @@
     return res
 
     
-3. "453 - MINIMUM MOVES TO EQUAL"
+3. "453 - MINIMUM MOVES TO EQUAL (Given an integer array nums of size n, return the minimum number of moves required to make all array elements equal.)"
+
+    def minMoves(self, nums):
+        nums.sort()
+        c = 0
+        for i in range(len(nums)-1, -1, -1):
+            if nums[i] == nums[0]:
+                break
+            c += nums[i] - nums[0]
+        return c
 
 4. "455 - ASSIGN COOKIES"
 
