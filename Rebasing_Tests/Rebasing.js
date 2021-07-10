@@ -30,3 +30,9 @@ NEW TEST 8 FEATURE BRANCH
 COMMIT 1 (FEATURE)
 
 COMMIT 3 (FEATURE)
+
+Rebase Squash Test 1
+
+Rebase Squash Test 2
+
+Rebase Squash Test 3
