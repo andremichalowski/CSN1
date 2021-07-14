@@ -22,4 +22,6 @@ Back to main after feature commits were made
 
 NEW TEST 7 FEATURE BRANCH
 
-NEW TEST 8 FEATURE BRANCH
+NEW TEST 8 FEATURE BRANCH 
+
+COMMIT 2 (MAIN)
