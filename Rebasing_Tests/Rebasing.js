@@ -40,3 +40,5 @@ Rebase Squash Test 3
 Squash Test 4
 
 ST 5
+
+ST 6
