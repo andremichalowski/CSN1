@@ -36,3 +36,5 @@ Rebase Squash Test 1
 Rebase Squash Test 2
 
 Rebase Squash Test 3
+
+Squash Test 4
