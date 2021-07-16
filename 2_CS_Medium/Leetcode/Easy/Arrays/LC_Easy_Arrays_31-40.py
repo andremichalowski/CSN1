@@ -66,7 +66,18 @@
                     count += sum_adjacent(i, j)
         return count
 
-6. "485 - MAX CONSECUTIVE ONES"
+6. "485 - MAX CONSECUTIVE ONES: Given a binary array nums, return the maximum number of consecutive 1's in the array."
+
+    def findMaxConsecutiveOnes(self, nums):
+        cnt = 0 # Create counter variable
+        ans = 0 # Create answer variable
+        for num in nums: # Loop through nums
+            if num == 1: # If num is one
+                cnt += 1 # Increment counter
+                ans = max(ans, cnt) # Compare to ans and update if max
+            else:
+                cnt = 0 # Reset counter when reaches 0 or end
+        return ans # return answer 
 
 7. "495 - TEEMO ATTACKING"
 
