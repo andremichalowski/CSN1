@@ -79,18 +79,12 @@
                 cnt = 0 # Reset counter when reaches 0 or end
         return ans # return answer 
 
-7. "495 - TEEMO ATTACKING"
-
-Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack.
-
-You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration.
-
-Return the total number of seconds that Ashe is poisoned.
+7. "495 - TEEMO ATTACKING" # Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack. # You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration. # Return the total number of seconds that Ashe is poisoned.
 
     def findPoisonedDuration(self, timeSeries, duration):
-        ans = duration * len(timeSeries)
-        for i in range(1,len(timeSeries)):
-            ans -= max(0, duration - (timeSeries[i] - timeSeries[i-1]))
+        ans = duration * len(timeSeries) # ans var = duration * length of the time series
+        for i in range(1,len(timeSeries)): # loop through length of time series
+            ans -= max(0, duration - (timeSeries[i] - timeSeries[i-1])) # ans decrement the difference between duration and (difference between time series sections)
         return ans
 
 8. "496 - NEXT GREATER ELEMENT"
