@@ -81,6 +81,12 @@
 
 7. "495 - TEEMO ATTACKING"
 
+    def findPoisonedDuration(self, timeSeries, duration):
+        ans = duration * len(timeSeries)
+        for i in range(1,len(timeSeries)):
+            ans -= max(0, duration - (timeSeries[i] - timeSeries[i-1]))
+        return ans
+
 8. "496 - NEXT GREATER ELEMENT"
 
 9. "500 - KEYBOARD ROW"
