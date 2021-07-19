@@ -96,7 +96,20 @@
 # - 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
 # - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
 
+    def nextGreaterElement(findNums, nums):
+        d = {}
+        st = []
+        ans = []
+        
+        for x in nums:
+            while len(st) and st[-1] < x:
+                d[st.pop()] = x
+            st.append(x)
 
+        for x in findNums:
+            ans.append(d.get(x, -1))
+            
+        return ans
 
 9. "500 - KEYBOARD ROW"
 
