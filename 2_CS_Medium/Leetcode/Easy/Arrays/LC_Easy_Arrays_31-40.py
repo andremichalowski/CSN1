@@ -102,12 +102,12 @@
         ans = []
         
         for x in nums:
-            while len(st) and st[-1] < x:
-                d[st.pop()] = x
-            st.append(x)
+            while len(st) and st[-1] < x: # while length stack and stack -1 less than x
+                d[st.pop()] = # dictionary add last on stack
+            st.append(x) # otherwise append x
 
-        for x in findNums:
-            ans.append(d.get(x, -1))
+        for x in findNums: 
+            ans.append(d.get(x, -1)) # ...
             
         return ans
 
