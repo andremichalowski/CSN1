@@ -125,13 +125,15 @@
     # Output: ["Alaska","Dad"]
 
     def findWords(self, words):
-        line1, line2, line3 = set('qwertyuiop'), set('asdfghjkl'), set('zxcvbnm')
-        ret = []
-        for word in words:
-            w = set(word.lower())
-            if w <= line1 or w <= line2 or w <= line3:
+        line1, line2, line3 = set('qwertyuiop'), set('asdfghjkl'), set('zxcvbnm') #set string for each row
+        ret = [] # arr
+        for word in words: # loop words
+            w = set(word.lower()) # w var = set for word (in lowercase)
+            if w <= line1 or w <= line2 or w <= line3: # if w is less than or = line 1,2 or 3 append to arr
                 ret.append(word)
         return ret
+
+    # SET Link: https://www.geeksforgeeks.org/python-set-method/
 
 
 
