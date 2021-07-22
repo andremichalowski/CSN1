@@ -121,6 +121,9 @@
     # the second row consists of the characters "asdfghjkl", and
     # the third row consists of the characters "zxcvbnm".
 
+    Input: words = ["Hello","Alaska","Dad","Peace"]
+    Output: ["Alaska","Dad"]
+
 
 
 10. "506 - RELATIVE RANKS"
