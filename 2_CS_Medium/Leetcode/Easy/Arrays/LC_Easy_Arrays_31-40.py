@@ -150,7 +150,10 @@
     # Return an array answer of size n where answer[i] is the rank of the ith athlete.
 
     def findRelativeRanks(self, nums):
-        s = {n: i for i, n in enumerate(sorted(nums, reverse=True))}
-        medals = ['Gold', 'Silver', 'Bronze']
-        return [str(s[n]+1) if s[n] >= len(medals) else (medals[s[n]] + ' Medal') for n in nums]
+        nums_sorted = sorted(nums, reverse = True) # Sort scores from best to worst
+        s = {score : index for index, score in enumerate(nums_sorted)} # Map each sorted score to its index
+        medals = ["Gold Medal", "Silver Medal", "Bronze Medal"] + [str(i) for i in range(4, len(nums) + 1)] # Create list of medals in ascending order
+        result = [medals[s[n]] for n in nums] # Generate the list of medals in order
+        return result
 
+    
