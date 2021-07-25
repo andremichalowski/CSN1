@@ -149,5 +149,8 @@
     # For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete's rank is "x").
     # Return an array answer of size n where answer[i] is the rank of the ith athlete.
 
-    
+    def findRelativeRanks(self, nums):
+        s = {n: i for i, n in enumerate(sorted(nums, reverse=True))}
+        medals = ['Gold', 'Silver', 'Bronze']
+        return [str(s[n]+1) if s[n] >= len(medals) else (medals[s[n]] + ' Medal') for n in nums]
 
