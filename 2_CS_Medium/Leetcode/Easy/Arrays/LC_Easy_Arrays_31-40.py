@@ -66,12 +66,96 @@
                     count += sum_adjacent(i, j)
         return count
 
-6. "485 - MAX CONSECUTIVE ONES"
+6. "485 - MAX CONSECUTIVE ONES: Given a binary array nums, return the maximum number of consecutive 1's in the array."
 
-7. "495 - TEEMO ATTACKING"
+    def findMaxConsecutiveOnes(self, nums):
+        cnt = 0 # Create counter variable
+        ans = 0 # Create answer variable
+        for num in nums: # Loop through nums
+            if num == 1: # If num is one
+                cnt += 1 # Increment counter
+                ans = max(ans, cnt) # Compare to ans and update if max
+            else:
+                cnt = 0 # Reset counter when reaches 0 or end
+        return ans # return answer 
 
-8. "496 - NEXT GREATER ELEMENT"
+7. "495 - TEEMO ATTACKING" # Our hero Teemo is attacking an enemy Ashe with poison attacks! When Teemo attacks Ashe, Ashe gets poisoned for a exactly duration seconds. More formally, an attack at second t will mean Ashe is poisoned during the inclusive time interval [t, t + duration - 1]. If Teemo attacks again before the poison effect ends, the timer for it is reset, and the poison effect will end duration seconds after the new attack. # You are given a non-decreasing integer array timeSeries, where timeSeries[i] denotes that Teemo attacks Ashe at second timeSeries[i], and an integer duration. # Return the total number of seconds that Ashe is poisoned.
+
+    def findPoisonedDuration(self, timeSeries, duration):
+        ans = duration * len(timeSeries) # ans var = duration * length of the time series
+        for i in range(1,len(timeSeries)): # loop through length of time series
+            ans -= max(0, duration - (timeSeries[i] - timeSeries[i-1])) # ans decrement the difference between duration and (difference between time series sections)
+        return ans
+
+8. "496 - NEXT GREATER ELEMENT" # The next greater element of some element x in an array is the first greater element that is to the right of x in the same array. # You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2. # For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1. # Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.
+
+# Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+# Output: [-1,3,-1]
+# Explanation: The next greater element for each value of nums1 is as follows:
+# - 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+# - 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
+# - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+
+    def nextGreaterElement(findNums, nums):
+        d = {}
+        st = []
+        ans = []
+        
+        for x in nums:
+            while len(st) and st[-1] < x: # while length stack and stack -1 less than x
+                d[st.pop()] = # dictionary add last on stack
+            st.append(x) # otherwise append x
+
+        for x in findNums: 
+            ans.append(d.get(x, -1)) # ...
+            
+        return ans
 
 9. "500 - KEYBOARD ROW"
 
+    # Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.
+
+    # In the American keyboard:
+
+    # the first row consists of the characters "qwertyuiop",
+    # the second row consists of the characters "asdfghjkl", and
+    # the third row consists of the characters "zxcvbnm".
+
+    # Input: words = ["Hello","Alaska","Dad","Peace"]
+    # Output: ["Alaska","Dad"]
+
+    def findWords(self, words):
+        line1, line2, line3 = set('qwertyuiop'), set('asdfghjkl'), set('zxcvbnm') #set string for each row
+        ret = [] # arr
+        for word in words: # loop words
+            w = set(word.lower()) # w var = set for word (in lowercase)
+            if w <= line1 or w <= line2 or w <= line3: # if w is less than or = line 1,2 or 3 append to arr
+                ret.append(word)
+        return ret
+
+    # SET Link: https://www.geeksforgeeks.org/python-set-method/
+
+
+
 10. "506 - RELATIVE RANKS"
+
+    # You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique.
+
+    # The athletes are placed based on their scores, where the 1st place athlete has the highest score, the 2nd place athlete has the 2nd highest score, and so on. The placement of each athlete determines their rank:
+
+    # The 1st place athlete's rank is "Gold Medal".
+    # The 2nd place athlete's rank is "Silver Medal".
+    # The 3rd place athlete's rank is "Bronze Medal".
+    # For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete's rank is "x").
+    # Return an array answer of size n where answer[i] is the rank of the ith athlete.
+
+    def findRelativeRanks(self, nums):
+        nums_sorted = sorted(nums, reverse = True) # Sort scores from best to worst
+        s = {score : index for index, score in enumerate(nums_sorted)} # Map each sorted score to its index
+        medals = ["Gold Medal", "Silver Medal", "Bronze Medal"] + [str(i) for i in range(4, len(nums) + 1)] # Create list of medals in ascending order
+        result = [medals[s[n]] for n in nums] # Generate the list of medals in order
+        return result
+
+    # Input: score = [5,4,3,2,1]
+    # Output: ["Gold Medal","Silver Medal","Bronze Medal","4","5"]
+    # Explanation: The placements are [1st, 2nd, 3rd, 4th, 5th].
